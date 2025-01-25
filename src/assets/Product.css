@@ -1,0 +1,124 @@
+.product-section{
+  background-color: rgb(105, 105, 105);
+  font-family: 'Times New Roman', Times, serif;  
+  border-radius: 20px;
+}
+.product-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+ /* background: url('https://wallpaperaccess.com/full/187264.jpg') no-repeat center center/cover; */
+  border-radius: 10px;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease;
+  border-color: #11045f;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  /* Entrance Animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s ease forwards;
+  animation-delay: var(--delay, 0.2s);
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.product-name {
+  font-size: 22px;
+  font-weight: bolder;
+  margin: 10px 0;
+  color: #000000;
+}
+
+.product-heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+  /* font-family: cursive; */
+}
+.product-heading1{
+  font-size: 3rem;
+  font-family: cursive;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffee00;
+}
+
+.product-price {
+  font-size: 16px;
+  color: rgb(54, 54, 54);
+  margin-bottom: 15px;
+  text-align: start;
+  font-weight: bold;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+.buy-button {
+  background-color: #11045f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-family: cursive;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #f8d547;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .buy-button{
+    font-family: cursive;
+  } 
+}
+
+@media (max-width: 480px) {
+  .product-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Keyframes for fade-in-up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

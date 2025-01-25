@@ -1,0 +1,132 @@
+/* Keyframes for individual element animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer container animation */
+.footer {
+  background-color: #000000;
+  color: #ffffffd3;
+  padding: 20px 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  animation: slideIn 1s ease-out;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Footer elements animation */
+.footer-section h3,
+.footer-section ul li,
+.footer-section ul li a {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.play-store {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.play-store-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.play-store p {
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Stagger animation for each footer element */
+.footer-section h3 {
+  animation-delay: 0.3s; /* Slight delay for headings */
+}
+
+.footer-section ul li {
+  animation-delay: 0.5s; /* Delay for list items */
+}
+
+.footer-section ul li a {
+  animation-delay: 0.7s; /* Delay for links */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  border-bottom: 2px solid #f8d547;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #f8d547;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  gap: 20px;
+}
+
+.footer-text {
+  color: white;
+}
+
+.terms-button {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin: 20px 0;
+  }
+}
